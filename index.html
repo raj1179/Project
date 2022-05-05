@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<title>Login</title>
+		<link rel="stylesheet" href="style/style.css" />
+		<script type="text/javascript" src="js/validate.js"></script>
+	</head>
+
+	<body>
+		<div class="main-grid">
+				<div class="app-name header">
+					Classwork
+				</div>
+				<div class="sign-up header">
+					Sign-Up
+				</div>
+
+			<div class="form">
+				<form id="Form" method="post" action="">
+
+					<h1 class="formHead">Login</h1>
+					<p class="userInfo">
+						Username:
+						<span id="usernameErrorFormat" class="error hide">
+							*Invalid format, format it as a uregina.ca email address.
+						</span>
+						<span id="usernameErrorEmpty"	class="error hide">
+							*Username is Empty.
+						</span>
+						<br />
+						<input class="inputField" type="text" name="email" id="username" />
+						<span id="usernameInstruction" class="instruction">
+							*Your Username is your email.
+						</span>
+					</p>
+					<p>
+						Password:
+						<span id="passwordErrorEmpty" class="error hide">
+							*Password is empty.
+						</span>
+						<span id="passwordErrorShort" class="error hide">
+							*The password is too short
+						</span>
+						<span id="passwordErrorSymbol" class="error hide">
+							*The password must have a symbol.
+						</span>
+						<br />
+						<input name="password" id="password" class="inputField" type="password" />
+						<span id="passwordInstruction" class="instruction">
+							*Must contain 8 characters and at least one symbol.
+						</span>
+					</p>
+					<p>
+						<input class="Button" value="Login" type="submit" />
+
+						<span class="signup instruction">
+							New User? <a href="signup.php">Sign-up</a> here
+						</span>
+					</p>
+				</form>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/login-r.js"></script>
+	</body>
+</html>

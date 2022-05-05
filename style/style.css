@@ -1,0 +1,45 @@
+.main-grid > div{
+  padding: 15px;
+}
+
+.main-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+  grid-template-rows: minmax(50px, auto);
+  grid-row-gap: 3em;
+}
+
+.header{
+  font-family: monospace;
+}
+
+.app-name{
+  grid-column: 2/3;
+  font-size: 2.5em;
+}
+
+.sign-up{
+  grid-column: 4/5;
+  justify-self: center;
+  align-self: center;
+  font-size: 1.5em;
+  color: rgba(255, 0, 0, 1);
+  background-color: rgba(255, 0, 0, 0.2);
+  border: 1.5px solid rgba(255, 0, 0, 1);
+  border-radius: 5px;
+}
+
+.form{
+  border: 2px solid grey;
+  grid-column: 3/4;
+  grid-row: 2/auto;
+}
+
+.userInfo{
+  font-size: 1.5em;
+}
+
+.error{
+  color: red;
+  font-size: 0.6em;
+}
