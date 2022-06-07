@@ -1,42 +1,81 @@
-.main-grid > div{
-  padding: 15px;
+body{
+	margin: 0;
+	padding: 0;
+	font-family: monospace;
 }
 
-.main-grid{
-  display: grid;
-  grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
-  grid-template-rows: minmax(50px, auto);
-  grid-row-gap: 3em;
+.button{
+	padding: 0.5rem;
+	font-family: inherit;
+	font-size: 1.5em;
+	border: 1.5px solid rgba(0, 0, 0, 1);
+	border-radius: 3px;
 }
 
 .header{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 1.0rem 10rem auto 10rem;
   font-family: monospace;
 }
 
 .app-name{
-  grid-column: 2/3;
+	align-items: flex-start;
+	justify-content: center;
   font-size: 2.5em;
 }
 
-.sign-up{
-  grid-column: 4/5;
-  justify-self: center;
-  align-self: center;
-  font-size: 1.5em;
+.register{
+	text-decoration: none;
   color: rgba(255, 0, 0, 1);
   background-color: rgba(255, 0, 0, 0.2);
-  border: 1.5px solid rgba(255, 0, 0, 1);
-  border-radius: 5px;
+	border-color: rgba(255, 0, 0, 1);
+}
+
+.main{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 80vh;
 }
 
 .form{
-  border: 2px solid grey;
-  grid-column: 3/4;
-  grid-row: 2/auto;
+	display: flex;
+	flex-direction: column;
+	padding: 0;
 }
 
-.userInfo{
-  font-size: 1.5em;
+.form-head{
+	align-self: center;
+	font-size: 2rem;
+	font-weight: lighter;
+	margin: 5px;
+}
+
+form>div:not(:nth-child(2)){
+	margin-top: 0.5rem;
+}
+
+.label{
+	font-size: 1rem;
+}
+
+.form-input-field{
+	background-color: lightgray;
+	border: 2px silver solid;
+	width: 250px;
+	height: 2rem;
+}
+
+.form-button{
+	padding: 0;
+	margin: 5px 0px 5px 0px;
+	font-weight: bold;
+	width: 258px;
+	height: 38px;
 }
 
 .error{
