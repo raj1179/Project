@@ -76,6 +76,7 @@ form>div:not(:nth-child(2)){
 	font-weight: bold;
 	width: 258px;
 	height: 38px;
+	cursor: pointer;
 }
 
 .error{
