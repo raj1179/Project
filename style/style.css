@@ -2,6 +2,12 @@ body{
 	margin: 0;
 	padding: 0;
 	font-family: monospace;
+	overflow-y: hidden;
+}
+
+ul{
+	margin: 0;
+	padding: 0;
 }
 
 .button{
@@ -17,7 +23,6 @@ body{
 	flex-direction: row;
 	justify-content: space-between;
 	margin: 1.0rem 10rem auto 10rem;
-  font-family: monospace;
 }
 
 .app-name{
@@ -26,11 +31,26 @@ body{
   font-size: 2.5em;
 }
 
-.register{
+.header-button{
 	text-decoration: none;
   color: rgba(255, 0, 0, 1);
-  background-color: rgba(255, 0, 0, 0.2);
+  background-color: rgba(255, 0, 0, 0.25);
 	border-color: rgba(255, 0, 0, 1);
+}
+
+.header-button:hover{
+	transition: 350ms;
+	color: rgba(0, 255, 0, 1);
+	background-color: rgba(0, 255, 0, 0.1);
+	border-color: rgba(0, 255, 0, 1);
+}
+
+.main-app{
+	width: 100vw;
+	height: 100%;
+	position: relative;
+	display: flex;
+	background: white;
 }
 
 .main{
@@ -77,6 +97,114 @@ form>div:not(:nth-child(2)){
 	width: 258px;
 	height: 38px;
 	cursor: pointer;
+}
+
+.sidebar-container{
+	height: 100%;
+	width: 200px;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: #f1f1f1;
+}
+
+.sidebar{
+	display: flex;
+	flex-direction: column;
+	height: auto;
+}
+
+.sidebar-mid{
+	overflow: hidden auto;
+	scrollbar-width: none;
+	margin-top: 4rem;
+}
+
+.notes{
+	margin-top: 1rem;
+	margin-left: 1rem;
+	font-size: 1rem;
+	font-weight: lighter;
+}
+
+.notes:last-child{
+	border-bottom: 1px silver solid;
+}
+
+.notes-list{
+	display: list-item;
+	list-style-type: circle;
+	margin-top: 5px;
+	height: 10rem;
+	overflow: hidden auto;
+	scrollbar-width: none;
+	text-indent: 1.5rem;
+}
+
+li a{
+	font-size: 1rem;
+	text-decoration: none;
+	color: rgba(0, 0, 0, 0.55);
+}
+
+li a:hover{
+	transition: 350ms;
+	color: rgba(0, 0, 0, 1);
+}
+
+li a:not(:last-child){
+	margin-bottom: 1.5px;
+}
+
+.new-note{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	width: 200px;
+	border-top: 1px silver solid;
+	background-color: #f1f1f1;
+	position: fixed;
+	bottom: 0;
+}
+
+.new-note>a{
+	text-decoration: none;
+	display:inline-block;
+	padding: 10px;
+}
+
+.icon{
+	padding: 0.5rem;
+	padding-right: 0;
+}
+
+.account{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	background-color: aliceblue;
+	width: 200px;
+	height: max-content;
+	position: fixed;
+	z-index: 100;
+}
+
+.account>a{
+	text-decoration: none;
+	color: black;
+	font-size: 1.2rem;
+	margin: 0.5rem;
+}
+
+.profile-picture{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	border: 2px silver solid;
+	margin: 0.5rem;
+	margin-left:1rem;
 }
 
 .error{
