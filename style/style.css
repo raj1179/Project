@@ -21,7 +21,7 @@ ul{
 .header{
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: center;
 	margin: 2% 15% 2% 15%;
 }
 
