@@ -3,7 +3,7 @@ console.log("login-js loaded");
 var email = document.getElementById('email');
 var password = document.getElementById('password');
 var loginBtn = document.getElementById('loginBtn');
-var flag = false;
+var flag;
 
 const regexEmail = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 const regexPassword = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
@@ -33,7 +33,7 @@ function validatePassword(event) {
 }
 
 function validateData(event) {
-	if(flag == false){
+	if(!flag){
 		event.preventDefault();
 	}
 }

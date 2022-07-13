@@ -1,58 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style/style.css"/>
-	<script src="https://kit.fontawesome.com/4282e73fe8.js" crossorigin="anonymous"></script>
-  <title>main</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css" />
+    <script src="https://kit.fontawesome.com/4282e73fe8.js" crossorigin="anonymous"></script>
+    <title>main</title>
 </head>
+
 <body>
-	<div class="main-app">
-		<div class="sidebar-container">
-			<div class="sidebar">
-				
-				<div class="account">
-					<img id="profilePicture" class="profile-picture" src="https://soccerpointeclaire.com/wp-content/uploads/2021/06/default-profile-pic-e1513291410505.jpg" alt="profile picture">
-					<a href="#">Raj Wadia</a>
-				</div>
+    <div class="main-app-container">
+        <div class="main-app">
+            <div class="sidebar-container">
+                <div class="sidebar">
+                    <div class="account">
+                        <img id="profilePicture" class="profile-picture" src="https://soccerpointeclaire.com/wp-content/uploads/2021/06/default-profile-pic-e1513291410505.jpg" alt="profile picture">
+                        <a href="#">Raj Wadia</a>
+                    </div>
+                    <div class="sidebar-mid">
+                        <div class="notes">Private Notes</div>
+                        <div class="notes-list">
+                            <div><a href="#">CS 203 - Introduction to JAVA programming</a></div>
+                            <div><a href="#">Note 2</a></div>
+                            <div><a href="#">Note 3</a></div>
+                            <div><a href="#">Note 4</a></div>
+                            <div><a href="#">Note 5</a></div>
+                            <div><a href="#">Note 6</a></div>
+                            <div><a href="#">Note 7</a></div>
+                        </div>
+                        <div class="notes">Favorite Notes</div>
+                        <div class="notes-list scrollbar">
+                            <div><a href="#">Note 1</a></div>
+                            <div><a href="#">Note 2</a></div>
+                            <div><a href="#">Note 3</a></div>
+                            <div><a href="#">Note 4</a></div>
+                            <div><a href="#">Note 5</a></div>
+                            <div><a href="#">Note 6</a></div>
+                            <div><a href="#">Note 7</a></div>
+                            <div><a href="#">Note 8</a></div>
+                            <div><a href="#">Note 9</a></div>
+                            <div><a href="#">Note 10</a></div>
+                        </div>
+                    </div>
+                    <div class="sidebar-bottom-container">
+                        <div class="sidebar-bottom">
+                            <div class="new-note">
+                                <i class="fa-solid fa-plus icon"></i>
+                                <a href="#">New Note</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-				<div class="sidebar-mid">
-					<div class="notes">Private Notes</div>
-						<div class="notes-list">
-							<div><a href="#">Note 1</a></div>
-							<div><a href="#">Note 2</a></div>
-							<div><a href="#">Note 3</a></div>
-							<div><a href="#">Note 4</a></div>
-							<div><a href="#">Note 5</a></div>
-							<div><a href="#">Note 6</a></div>
-							<div><a href="#">Note 7</a></div>
-						</div>
-
-					<div class="notes">Favorite Notes</div>
-						<div class="notes-list">
-							<div><a href="#">Note 1</a></div>
-							<div><a href="#">Note 2</a></div>
-							<div><a href="#">Note 3</a></div>
-							<div><a href="#">Note 4</a></div>
-							<div><a href="#">Note 5</a></div>
-							<div><a href="#">Note 6</a></div>
-							<div><a href="#">Note 7</a></div>
-							<div><a href="#">Note 8</a></div>
-							<div><a href="#">Note 9</a></div>
-							<div><a href="#">Note 10</a></div>
-						</div>
-				</div>
-					<div class="sidebar-bottom-container">
-						<div class="sidebar-bottom">
-							<div class="new-note">
-								<i class="fa-solid fa-plus icon"></i>
-								<a href="#">New Note</a>
-							</div>
-						</div>
-					</div>
-			</div>
-		</div>
-	</div>
+            <div class="note-area-container">
+                <div class="note-area">
+                    <div class="note-title">
+                        <input id="title-input" class="title-input" placeholder="Untitled Note" type="text" />
+                    </div>
+                    <div class="note-content">
+                        <textarea placeholder="Start typing your note here..." name="content-input" id="content-input" class="content-input scrollbar" cols="30" rows="50"></textarea>
+                        <!-- <input type="text" placeholder="Start typing your note here..." name="content-input" id="content-input" class="content-input scrollbar"/> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>

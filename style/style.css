@@ -2,7 +2,7 @@ body{
 	margin: 0;
 	padding: 0;
 	font-family: monospace;
-	overflow: hidden auto;
+	overflow: auto hidden;
 }
 
 ul{
@@ -45,33 +45,29 @@ ul{
 	border-color: rgba(0, 255, 0, 1);
 }
 
-.main-app{
-	width: 100vw;
-	height: 100%;
-	flex-direction: column;
-	background: white;
-}
-
 .main{
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	align-items: center;
 	justify-content: center;
-	width: 100%;
-	height: 80vh;
+	max-width: 100vw;
+	height: 100vh;
 }
 
 .form{
 	display: flex;
 	flex-direction: column;
-	padding: 0;
+	justify-self: center;
+	align-self: center;
+	padding: 5rem;
+	max-width: 100rem;
+	max-height: 100rem;
 }
 
 .form-head{
 	align-self: center;
 	font-size: 2rem;
 	font-weight: lighter;
-	margin: 5px;
 	margin-bottom: 1.5rem;
 }
 
@@ -86,33 +82,42 @@ form>div:not(:nth-child(2)){
 .form-input-field{
 	background-color: rgba(227, 227, 227,1.0);
 	border: 2px silver solid;
-	width: 250px;
 	height: 2rem;
 }
 
 .form-button{
 	padding: 0;
-	margin: 5px 0px 5px 0px;
+	margin: 1rem 0rem 0.5rem 0rem;
 	font-weight: bold;
-	width: 258px;
-	height: 38px;
+	width: 15.7rem;
+	height: 2.5rem;
 	cursor: pointer;
 }
 
+.main-app{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+.main-app > *{
+	flex-grow: 1;
+	flex-basis: auto;
+}
+
 .sidebar-container{
-	height: 100%;
-	width: 200px;
-	position: absolute;
-	z-index: 1;
-	top: 0;
-	left: 0;
-	background-color: #f1f1f1;
+  background-color:rgb(250, 255, 255);
+  height: 100vh;
+	min-width: 12.5rem;
+	max-width: 18.75rem;
 }
 
 .sidebar{
 	display: flex;
 	flex-direction: column;
-	gap: 5px;
+	gap: 1rem;
 	height: 100vh;
 }
 
@@ -120,10 +125,11 @@ form>div:not(:nth-child(2)){
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	width: 200px;
+	justify-content: center;
+	width: inherit;
 	height: max-content;
 	position: relative;
-	
+	background: rgb(255, 253, 230);
 }
 
 .account>a{
@@ -139,18 +145,19 @@ form>div:not(:nth-child(2)){
 	border-radius: 50%;
 	border: 2px silver solid;
 	margin: 0.5rem;
-	margin-left:1rem;
+	margin-left: 1rem;
 }
 
 .sidebar-mid{
 	height: 100%;
+	width: inherit;
 	overflow: hidden auto;
 	scrollbar-width: thin;
 }
 
 .notes{
-	margin: 0.5rem;
-	margin-left: 1rem;
+	background-color: #f1f1f1;
+	padding: 0.2rem;
 	font-size: 1rem;
 	font-weight: lighter;
 }
@@ -160,9 +167,6 @@ form>div:not(:nth-child(2)){
 }
 
 .notes-list{
-	height: 10rem;
-	overflow: hidden auto;
-	scrollbar-width: none;
 	text-indent: 2rem;
 }
 
@@ -171,7 +175,7 @@ ul.notes-list{
 	border-bottom: 2px silver solid;
 }
 
-.notes-list::-webkit-scrollbar{
+.scrollbar::-webkit-scrollbar{
 	display: none;
 }
 
@@ -185,32 +189,33 @@ div.notes-list>div>a{
 	font-size: 1rem;
 	text-decoration: none;
 	color: rgba(0, 0, 0, 0.55);
+	text-size-adjust: 10%;
 }
 
 div.notes-list>div:hover{
 	transition: 350ms;
+	transition-timing-function: ease-in-out;
 	background-color: rgba(0, 0, 0, 0.15);
 	color: rgba(0, 0, 0, 1);
 	cursor: pointer;
 }
 
 .sidebar-bottom-container{
-	position: absolute;
+	position: relative;
 	bottom: 0;
-	width: 200px;
-	background-color: #f1f1f1;
+	width: inherit;
 }
 
 .sidebar-bottom{
 	display: flex;
 	flex-direction: column;
+	background-color: yellow;
 }
 
 .new-note{
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: inherit;
 	border-top: 1px silver solid;
 	background-color: #f1f1f1;
 	color: rgba(0, 0, 0, 1);
@@ -226,6 +231,71 @@ div.notes-list>div:hover{
 .new-note>a:hover{
 	transition: 350ms;
 	color: rgba(0, 0, 0, 0.55);
+}
+
+.note-area-container{
+	overflow: auto;
+	visibility: unset;
+	max-width: 100rem;
+	border: 10px solid red;
+}
+
+.note-area{
+	display: flex;
+	flex-direction: column;
+	position:relative;
+	z-index: auto;
+	height: 100fr;
+}
+
+.note-title{
+	margin: 1rem;
+}
+
+.title-input{
+	width: 62.5rem;
+	height: 3.75rem;
+	padding: 0.5rem;
+	resize: none;
+	border: none;
+	font-family: inherit;
+	font-size: 3rem;
+	font-weight: bold;
+}
+
+.title-input:focus{
+	outline: none;
+}
+
+.title-input::placeholder{
+	color: rgba(0, 0, 0, 0.15);
+	font-family: monospace;
+}
+
+.note-content{
+	box-sizing: border-box;
+}
+
+.content-input{
+	position: absolute;
+	left: 10%;
+	right: 20%;
+	margin-top: 1rem;
+	border: none;
+	width: 80%;
+	height: 100%;
+	max-height: 45rem;
+	overflow: hidden auto;
+	resize: none;
+	word-wrap: auto;
+	word-break: break-all;
+	font-family: inherit;
+	font-size: 1rem;
+	font-weight: lighter;
+}
+
+.content-input::-webkit-scrollbar{
+	width: 1rem;
 }
 
 .error{
